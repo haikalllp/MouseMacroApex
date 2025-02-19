@@ -124,7 +124,7 @@ namespace NotesTasks
         {
             keyboardProc = KeyboardHookCallback;
             mouseProc = MouseHookCallback;
-            
+
             try
             {
                 InitializeComponent();
@@ -145,7 +145,7 @@ namespace NotesTasks
                 // Initialize tray icon behavior
                 notifyIcon.DoubleClick += (s, e) => ShowWindow();
                 showWindowMenuItem.Click += (s, e) => ShowWindow();
-                exitMenuItem.Click += (s, e) => 
+                exitMenuItem.Click += (s, e) =>
                 {
                     CleanupAndExit();
                 };
@@ -176,8 +176,8 @@ namespace NotesTasks
                     trackBarRecoil.Width = availableWidth;
                     btnToggleDebug.Width = availableWidth;
                 };
-                
-                this.Load += (sender, e) => 
+
+                this.Load += (sender, e) =>
                 {
                     try
                     {
@@ -211,7 +211,7 @@ namespace NotesTasks
             // Set initial text with bold formatting
             UpdateCurrentKey(toggleKey.ToString());
 
-            btnSetKey.Click += (sender, e) => 
+            btnSetKey.Click += (sender, e) =>
             {
                 isSettingKey = true;
                 btnSetKey.Text = "Press any key...";
@@ -238,7 +238,7 @@ namespace NotesTasks
                 string mode = jitterEnabled ? "Jitter" : "Recoil Reducer";
                 UpdateDebugInfo($"Switched to {mode} mode - Strength: {(jitterEnabled ? jitterStrength : recoilStrength)}");
                 UpdateTitle();
-                
+
                 // Show/hide appropriate controls
                 strengthPanel1.Visible = !jitterEnabled;
                 strengthPanel2.Visible = jitterEnabled;
@@ -309,7 +309,7 @@ namespace NotesTasks
                 if (isSettingKey)
                 {
                     int msg = wParam.ToInt32();
-                    
+
                     // Don't allow LMB or RMB as they're used for macro activation
                     if (msg == WM_MBUTTONDOWN)
                     {
@@ -325,7 +325,7 @@ namespace NotesTasks
                     {
                         MSLLHOOKSTRUCT hookStruct = (MSLLHOOKSTRUCT)Marshal.PtrToStructure(lParam, typeof(MSLLHOOKSTRUCT));
                         int xButton = (int)((hookStruct.mouseData >> 16) & 0xFFFF);
-                        
+
                         if (xButton == XBUTTON1)
                         {
                             currentToggleType = ToggleType.MouseX1;
@@ -401,7 +401,7 @@ namespace NotesTasks
         private void CheckJitterState()
         {
             bool shouldActivate = isMacroOn && leftButtonDown && rightButtonDown;
-            
+
             if (shouldActivate && !isJittering)
             {
                 isJittering = true;
@@ -546,7 +546,7 @@ namespace NotesTasks
         private void CleanupAndExit()
         {
             isExiting = true;
-            
+
             // Stop timers and hooks
             try
             {
@@ -597,6 +597,16 @@ namespace NotesTasks
             UpdateTitle();
             string mode = jitterEnabled ? "Jitter" : "Recoil Reducer";
             UpdateDebugInfo($"Macro {(isMacroOn ? "Enabled" : "Disabled")} - Mode: {mode}, Key: **{toggleKey}**");
+        }
+
+        private void lblJitterStrengthValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
