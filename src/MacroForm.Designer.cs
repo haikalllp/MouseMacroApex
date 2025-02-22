@@ -70,7 +70,10 @@ namespace NotesTasks
             // mainPanel
             // 
             mainPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            mainPanel.BackColor = Color.FromArgb(30, 30, 30);
+            mainPanel.BackColor = Color.Black;
+            mainPanel.BackgroundImage = Properties.Resources.wallpaper3;
+            mainPanel.BackgroundImageLayout = ImageLayout.None;
+            mainPanel.BorderStyle = BorderStyle.FixedSingle;
             mainPanel.Controls.Add(debugPanel);
             mainPanel.Controls.Add(btnToggleDebug);
             mainPanel.Controls.Add(strengthPanel1);
@@ -78,11 +81,11 @@ namespace NotesTasks
             mainPanel.Controls.Add(settingsPanel);
             mainPanel.Controls.Add(chkAlwaysJitter);
             mainPanel.Controls.Add(chkAlwaysRecoilReduction);
-            mainPanel.Location = new Point(0, 0);
+            mainPanel.Location = new Point(-1, -1);
             mainPanel.Margin = new Padding(3, 2, 3, 2);
             mainPanel.Name = "mainPanel";
             mainPanel.Padding = new Padding(14, 12, 14, 12);
-            mainPanel.Size = new Size(493, 655);
+            mainPanel.Size = new Size(488, 743);
             mainPanel.TabIndex = 0;
             // 
             // debugPanel
@@ -96,7 +99,7 @@ namespace NotesTasks
             debugPanel.Margin = new Padding(3, 2, 3, 2);
             debugPanel.Name = "debugPanel";
             debugPanel.Padding = new Padding(7, 6, 7, 6);
-            debugPanel.Size = new Size(465, 134);
+            debugPanel.Size = new Size(458, 220);
             debugPanel.TabIndex = 7;
             debugPanel.Visible = false;
             // 
@@ -113,25 +116,28 @@ namespace NotesTasks
             debugLabel.Name = "debugLabel";
             debugLabel.ReadOnly = true;
             debugLabel.ScrollBars = ScrollBars.Vertical;
-            debugLabel.Size = new Size(449, 120);
+            debugLabel.Size = new Size(442, 206);
             debugLabel.TabIndex = 0;
             // 
             // btnToggleDebug
             // 
             btnToggleDebug.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnToggleDebug.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleDebug.FlatStyle = FlatStyle.Flat;
             btnToggleDebug.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             btnToggleDebug.ForeColor = Color.White;
             btnToggleDebug.Location = new Point(14, 464);
             btnToggleDebug.Margin = new Padding(0, 0, 0, 12);
             btnToggleDebug.Name = "btnToggleDebug";
-            btnToggleDebug.Size = new Size(465, 30);
+            btnToggleDebug.Size = new Size(458, 30);
             btnToggleDebug.TabIndex = 5;
             btnToggleDebug.Text = "Show Debug Info";
+            btnToggleDebug.UseVisualStyleBackColor = false;
             // 
             // strengthPanel1
             // 
             strengthPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            strengthPanel1.BackColor = Color.FromArgb(255, 128, 128);
             strengthPanel1.Controls.Add(lblRecoilReductionStrengthValue);
             strengthPanel1.Controls.Add(lblRecoilReductionStrengthPrefix);
             strengthPanel1.Controls.Add(trackBarRecoilReduction);
@@ -139,7 +145,7 @@ namespace NotesTasks
             strengthPanel1.Location = new Point(14, 210);
             strengthPanel1.Margin = new Padding(0, 0, 0, 12);
             strengthPanel1.Name = "strengthPanel1";
-            strengthPanel1.Size = new Size(465, 84);
+            strengthPanel1.Size = new Size(458, 84);
             strengthPanel1.TabIndex = 9;
             // 
             // lblRecoilReductionStrengthValue
@@ -174,7 +180,7 @@ namespace NotesTasks
             trackBarRecoilReduction.Maximum = 20;
             trackBarRecoilReduction.Minimum = 1;
             trackBarRecoilReduction.Name = "trackBarRecoilReduction";
-            trackBarRecoilReduction.Size = new Size(465, 45);
+            trackBarRecoilReduction.Size = new Size(458, 45);
             trackBarRecoilReduction.TabIndex = 8;
             trackBarRecoilReduction.Value = 1;
             // 
@@ -192,6 +198,7 @@ namespace NotesTasks
             // strengthPanel2
             // 
             strengthPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            strengthPanel2.BackColor = Color.FromArgb(255, 128, 128);
             strengthPanel2.Controls.Add(lblJitterStrengthValue);
             strengthPanel2.Controls.Add(lblJitterStrengthPrefix);
             strengthPanel2.Controls.Add(trackBarJitter);
@@ -199,7 +206,7 @@ namespace NotesTasks
             strengthPanel2.Location = new Point(14, 313);
             strengthPanel2.Margin = new Padding(0, 0, 0, 12);
             strengthPanel2.Name = "strengthPanel2";
-            strengthPanel2.Size = new Size(465, 81);
+            strengthPanel2.Size = new Size(458, 81);
             strengthPanel2.TabIndex = 10;
             // 
             // lblJitterStrengthValue
@@ -234,7 +241,7 @@ namespace NotesTasks
             trackBarJitter.Maximum = 20;
             trackBarJitter.Minimum = 1;
             trackBarJitter.Name = "trackBarJitter";
-            trackBarJitter.Size = new Size(465, 45);
+            trackBarJitter.Size = new Size(458, 45);
             trackBarJitter.TabIndex = 3;
             trackBarJitter.Value = 3;
             // 
@@ -253,6 +260,7 @@ namespace NotesTasks
             // settingsPanel
             // 
             settingsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            settingsPanel.BackColor = Color.FromArgb(255, 128, 128);
             settingsPanel.Controls.Add(lblCurrentKeyValue);
             settingsPanel.Controls.Add(lblCurrentKeyPrefix);
             settingsPanel.Controls.Add(btnSetKey);
@@ -263,7 +271,7 @@ namespace NotesTasks
             settingsPanel.Location = new Point(14, 12);
             settingsPanel.Margin = new Padding(0, 0, 0, 12);
             settingsPanel.Name = "settingsPanel";
-            settingsPanel.Size = new Size(465, 179);
+            settingsPanel.Size = new Size(458, 179);
             settingsPanel.TabIndex = 11;
             // 
             // lblCurrentKeyValue
@@ -271,7 +279,7 @@ namespace NotesTasks
             lblCurrentKeyValue.AutoSize = true;
             lblCurrentKeyValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lblCurrentKeyValue.ForeColor = Color.White;
-            lblCurrentKeyValue.Location = new Point(121, 24);
+            lblCurrentKeyValue.Location = new Point(121, 25);
             lblCurrentKeyValue.Margin = new Padding(0);
             lblCurrentKeyValue.Name = "lblCurrentKeyValue";
             lblCurrentKeyValue.Size = new Size(56, 19);
@@ -300,7 +308,7 @@ namespace NotesTasks
             btnSetKey.Location = new Point(0, 47);
             btnSetKey.Margin = new Padding(0, 0, 0, 12);
             btnSetKey.Name = "btnSetKey";
-            btnSetKey.Size = new Size(465, 30);
+            btnSetKey.Size = new Size(458, 30);
             btnSetKey.TabIndex = 1;
             btnSetKey.Text = "Set Toggle Key";
             // 
@@ -310,7 +318,7 @@ namespace NotesTasks
             chkMinimizeToTray.AutoSize = true;
             chkMinimizeToTray.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             chkMinimizeToTray.ForeColor = Color.White;
-            chkMinimizeToTray.Location = new Point(333, 2);
+            chkMinimizeToTray.Location = new Point(326, 2);
             chkMinimizeToTray.Margin = new Padding(3, 2, 3, 2);
             chkMinimizeToTray.Name = "chkMinimizeToTray";
             chkMinimizeToTray.Size = new Size(129, 23);
@@ -337,7 +345,7 @@ namespace NotesTasks
             btnSetMacroSwitch.Location = new Point(0, 128);
             btnSetMacroSwitch.Margin = new Padding(0, 0, 0, 12);
             btnSetMacroSwitch.Name = "btnSetMacroSwitch";
-            btnSetMacroSwitch.Size = new Size(465, 30);
+            btnSetMacroSwitch.Size = new Size(458, 30);
             btnSetMacroSwitch.TabIndex = 4;
             btnSetMacroSwitch.Text = "Set Switch Key";
             // 
@@ -355,6 +363,7 @@ namespace NotesTasks
             // chkAlwaysJitter
             // 
             chkAlwaysJitter.AutoSize = true;
+            chkAlwaysJitter.BackColor = Color.FromArgb(255, 128, 128);
             chkAlwaysJitter.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             chkAlwaysJitter.ForeColor = Color.White;
             chkAlwaysJitter.Location = new Point(14, 417);
@@ -363,10 +372,12 @@ namespace NotesTasks
             chkAlwaysJitter.Size = new Size(144, 23);
             chkAlwaysJitter.TabIndex = 3;
             chkAlwaysJitter.Text = "Always Jitter Mode";
+            chkAlwaysJitter.UseVisualStyleBackColor = false;
             // 
             // chkAlwaysRecoilReduction
             // 
             chkAlwaysRecoilReduction.AutoSize = true;
+            chkAlwaysRecoilReduction.BackColor = Color.FromArgb(255, 128, 128);
             chkAlwaysRecoilReduction.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             chkAlwaysRecoilReduction.ForeColor = Color.White;
             chkAlwaysRecoilReduction.Location = new Point(181, 417);
@@ -375,6 +386,7 @@ namespace NotesTasks
             chkAlwaysRecoilReduction.Size = new Size(214, 23);
             chkAlwaysRecoilReduction.TabIndex = 2;
             chkAlwaysRecoilReduction.Text = "Always Recoil Reduction Mode";
+            chkAlwaysRecoilReduction.UseVisualStyleBackColor = false;
             // 
             // notifyIcon
             // 
@@ -405,8 +417,10 @@ namespace NotesTasks
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(493, 655);
+            BackgroundImage = Properties.Resources.wallpaper3;
+            ClientSize = new Size(487, 741);
             Controls.Add(mainPanel);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             MinimumSize = new Size(352, 422);
             Name = "MacroForm";

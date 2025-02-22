@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseMacro", "MouseMacro.csproj", "{1FFAD009-1089-42F1-C326-6CC678F746BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FFAD009-1089-42F1-C326-6CC678F746BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FFAD009-1089-42F1-C326-6CC678F746BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FFAD009-1089-42F1-C326-6CC678F746BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FFAD009-1089-42F1-C326-6CC678F746BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B667E9C7-779B-41CA-8DB7-DA31F50E0722}
+	EndGlobalSection
+EndGlobal
